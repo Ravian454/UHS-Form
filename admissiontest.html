@@ -1,45 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
     <title>Admission Form</title>
     <style>
-      .list-group-item.active {
+         .list-group-item.active {
         background-color: #d9e9f1;
         border-color: #d9e9f1;
         color: #307b9a;
       }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav
-            class="navbar navbar-expand-lg navbar-light bg-inherit d-flex justify-content-center pb-3"
-          >
-            <a class="navbar-brand d-flex align-items-center" href="#">
-              <!-- Logo goes here. -->
-              <img
-                src="images/logo.png"
-                alt="Logo"
-                style="height: 55px; width: 55px"
-              />
-              <span>University Of Health Sciences</span>
-            </a>
-          </nav>
-        </div>
-      </div>
-    </div>
+        .navbar-brand img {
+            height: 55px;
+            width: 55px;
+            margin-right: 10px;
+        }
+        
+        .navbar-brand span {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
 
-    <div class="container">
-      <div class="row">
+        .user-circle {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .user-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .search-bar {
+            margin-right: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+          /* Sticky Footer styles for small screens (up to 767px) */
+          @media (max-width: 767px) {
+            .footer {
+                background-color: #2a2e31;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+            }
+        }
+
+        /* Sticky Footer styles for medium/large screens (768px and above) */
+        @media (min-width: 768px) {
+            .footer {
+                background-color: #2a2e31;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+        } 
+    </style>
+</head>
+<body>
+  <div >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+              <img src="images/logo.png" alt="Logo" />
+              <span>University Of Health Sciences</span>
+          </a>
+          <div class="d-flex align-items-center ms-auto">
+              <form class="search-bar">
+                  <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                  />
+              </form>
+              <div class="user-circle dropdown" data-bs-toggle="dropdown">
+                  <img src="images/user.jpg" alt="User Profile" />
+                  
+              </div>
+              <div class="dropdown" style="padding-top: 50px;">
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="customDropdownMenuButton">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
+</div>
+    
+    <div class="container" style="padding-top: 30px;">
+     <div class="row">
         <div class="col-md-3">
           <!-- First Column (25% of space) -->
           <div
@@ -102,7 +167,7 @@
                 alt="auth icon"
                 style="height: 25px; margin-right: 5px"
               />
-              Add Preferences
+              University Preferences
             </a>
             <a
                 href="documents.html"
@@ -128,92 +193,238 @@
             </a>
           </div>
         </div>
-        <div
-          class="col-md-9 p-5"
-          style="
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-          "
-        >
-          <!-- Second Column (75% of space) -->
-          <h6 class="mb-3 fw-bold">MDCAT Marks</h6>
-          <div class="mb-3">
-            <div class="row">
-              <div class="col-md-4">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="mdcatYearCnic"
-                  placeholder="MDCAT Year-CNIC"
-                />
+        <div class="col-md-9 p-5" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);">
+          <!-- ... existing form content ... -->
+          <h6 class="mb-3 fw-bold">Select Test Type:</h6>
+          <select id="testTypeDropdown" class="form-select mb-3">
+              <option value="">Select an option</option>
+              <option value="MDCAT">MDCAT</option>
+              <option value="SAT">SAT</option>
+              <option value="UCAT">UCAT</option>
+          </select>
+
+          <!-- ... input fields for MDCAT ... -->
+          <div id="mdcatFields" class="hidden">
+              <h6 class="mb-3 fw-bold">MDCAT Marks</h6>
+              <div class="mb-3">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <input
+                              type="text"
+                              class="form-control"
+                              id="mdcatYearCnic"
+                              placeholder="MDCAT Year-CNIC"
+                          />
+                      </div>
+                      <div class="col-md-4">
+                          <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Centre from where appeared"
+                          />
+                      </div>
+                      <div class="col-md-4">
+                          <input
+                              type="number"
+                              class="form-control"
+                              placeholder="Marks Obtained"
+                          />
+                      </div>
+                  </div>
               </div>
-              <div class="col-md-4">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Centre from where appeared"
-                />
+              <div class="mb-3">
+                  <label for="mdcatApplicant" class="mb-3 fw-bold"
+                      >MDCAT Applicant</label
+                  >
+                  <div class="row">
+                      <div class="col-md-6">
+                          <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Applicant Name"
+                          />
+                      </div>
+                      <div class="col-md-6">
+                          <input
+                              type="number"
+                              class="form-control"
+                              placeholder="Applicant CNIC"
+                          />
+                      </div>
+                  </div>
               </div>
-              <div class="col-md-4">
-                <input
-                  type="number"
-                  class="form-control"
-                  placeholder="Marks Obtained"
-                />
-              </div>
-            </div>
           </div>
-          <div class="mb-3">
-            <label for="mdcatApplicant" class="mb-3 fw-bold"
-              >MDCAT Applicant</label
-            >
-            <div class="row">
-              <div class="col-md-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Applicant Name"
-                />
+
+          <!-- ... input fields for SAT ... -->
+          <div id="satFields" class="hidden">
+              <h6 class="mb-3 fw-bold">SAT Marks</h6>
+              <div class="mb-3">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <input
+                              type="text"
+                              class="form-control"
+                              id="satYearCnic"
+                              placeholder="SAT Year-CNIC"
+                          />
+                      </div>
+                      <div class="col-md-4">
+                          <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Centre from where appeared"
+                          />
+                      </div>
+                      <div class="col-md-4">
+                          <input
+                              type="number"
+                              class="form-control"
+                              placeholder="Marks Obtained"
+                          />
+                      </div>
+                  </div>
               </div>
-              <div class="col-md-6">
-                <input
-                  type="number"
-                  class="form-control"
-                  placeholder="Applicant CNIC"
-                />
+              <div class="mb-3">
+                  <label for="satApplicant" class="mb-3 fw-bold"
+                      >SAT Applicant</label
+                  >
+                  <div class="row">
+                      <div class="col-md-6">
+                          <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Applicant Name"
+                          />
+                      </div>
+                      <div class="col-md-6">
+                          <input
+                              type="number"
+                              class="form-control"
+                              placeholder="Applicant CNIC"
+                          />
+                      </div>
+                  </div>
               </div>
+          </div>
+
+          <!-- ... input fields for UCAT ... -->
+          <div id="ucatFields" class="hidden">
+            <h6 class="mb-3 fw-bold">UCAT Marks</h6>
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="UCATYearCnic"
+                            placeholder="UCAT Year-CNIC"
+                        />
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Centre from where appeared"
+                        />
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Marks Obtained"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="UCATApplicant" class="mb-3 fw-bold"
+                    >UCAT Applicant</label
+                >
+                <div class="row">
+                    <div class="col-md-6">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Applicant Name"
+                        />
+                    </div>
+                    <div class="col-md-6">
+                        <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Applicant CNIC"
+                        />
+                    </div>
+                </div>
             </div>
           </div>
 
           <!-- Save button -->
           <div class="row">
-            <div class="col text-end">
-              <a href="prefernces.html">
-                <button type="submit" class="btn btn-success">
-                  Save & Continue
-                </button>
-              </a>
-            </div>
+              <div class="col text-end">
+                  <a href="prefernces.html">
+                      <button type="submit" class="btn btn-success">Save & Continue</button>
+                  </a>
+              </div>
           </div>
-        </div>
       </div>
-    </div>
+  </div>
+</div>
+<div class="footer">
+  © Copyright 2023 Site Developed and Maintained by IT Department, UHS.
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const mdcatYearCnicInput = document.getElementById("mdcatYearCnic");
+          const mdcatYearCnicInput = document.getElementById("mdcatYearCnic");
+          const satYearCnicInput = document.getElementById("satYearCnic");
+          const testTypeDropdown = document.getElementById("testTypeDropdown");
+          const mdcatFields = document.getElementById("mdcatFields");
+          const satFields = document.getElementById("satFields");
+          const ucatFields = document.getElementById("ucatFields");
 
-        mdcatYearCnicInput.addEventListener("input", function () {
-          let value = mdcatYearCnicInput.value.replace(/\D/g, ""); // Remove non-numeric characters
+          mdcatYearCnicInput.addEventListener("input", function () {
+              let value = mdcatYearCnicInput.value.replace(/\D/g, "");
 
-          if (value.length > 4) {
-            value = value.slice(0, 4) + "-" + value.slice(4); // Add dash after 4 characters
-          }
+              if (value.length > 4) {
+                  value = value.slice(0, 4) + "-" + value.slice(4);
+              }
 
-          mdcatYearCnicInput.value = value;
-        });
+              mdcatYearCnicInput.value = value;
+          });
+
+          satYearCnicInput.addEventListener("input", function () {
+              let value = satYearCnicInput.value.replace(/\D/g, "");
+
+              if (value.length > 4) {
+                  value = value.slice(0, 4) + "-" + value.slice(4);
+              }
+
+              satYearCnicInput.value = value;
+          });
+
+          testTypeDropdown.addEventListener("change", function () {
+              const selectedOption = testTypeDropdown.value;
+
+              if (selectedOption === "MDCAT") {
+                  mdcatFields.classList.remove("hidden");
+                  satFields.classList.add("hidden");
+                  ucatFields.classList.add("hidden");
+              } else if (selectedOption === "SAT") {
+                  satFields.classList.remove("hidden");
+                  mdcatFields.classList.add("hidden");
+                  ucatFields.classList.add("hidden");
+              } else if (selectedOption === "UCAT") {
+                  ucatFields.classList.remove("hidden");
+                  mdcatFields.classList.add("hidden");
+                  satFields.classList.add("hidden");
+              } else {
+                  mdcatFields.classList.add("hidden");
+                  satFields.classList.add("hidden");
+                  ucatFields.classList.add("hidden");
+              }
+          });
       });
-    </script>
+  </script>
   </body>
 </html>

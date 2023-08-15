@@ -1,44 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
     <title>Admission Form</title>
     <style>
-      .list-group-item.active {
+         .list-group-item.active {
         background-color: #d9e9f1;
         border-color: #d9e9f1;
         color: #307b9a;
       }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav
-            class="navbar navbar-expand-lg navbar-light bg-inherit d-flex justify-content-center pb-3"
-          >
-            <a class="navbar-brand d-flex align-items-center" href="#">
-              <!-- Logo goes here. -->
-              <img
-                src="images/logo.png"
-                alt="Logo"
-                style="height: 55px; width: 55px"
-              />
-              <span>University Of Health Sciences</span>
-            </a>
-          </nav>
-        </div>
-      </div>
-    </div>
+        .navbar-brand img {
+            height: 55px;
+            width: 55px;
+            margin-right: 10px;
+        }
+        
+        .navbar-brand span {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
 
-    <div class="container">
+        .user-circle {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .user-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .search-bar {
+            margin-right: 10px;
+        }
+        
+        /* Sticky Footer styles for small screens (up to 767px) */
+          @media (max-width: 767px) {
+            .footer {
+                background-color: #2a2e31;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+            }
+        }
+
+        /* Sticky Footer styles for medium/large screens (768px and above) */
+        @media (min-width: 768px) {
+            .footer {
+                background-color: #2a2e31;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+        }       
+    </style>
+</head>
+<body>
+ 
+  <div >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+              <img src="images/logo.png" alt="Logo" />
+              <span>University Of Health Sciences</span>
+          </a>
+          <div class="d-flex align-items-center ms-auto">
+              <form class="search-bar">
+                  <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                  />
+              </form>
+              <div class="user-circle dropdown" data-bs-toggle="dropdown">
+                  <img src="images/user.jpg" alt="User Profile" />
+                  
+              </div>
+              <div class="dropdown" style="padding-top: 50px;">
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="customDropdownMenuButton">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
+</div>
+    
+
+    <div class="container" style="padding-top: 30px;">
       <div class="row">
         <div class="col-md-3">
           <!-- First Column (25% of space) -->
@@ -102,7 +167,7 @@
                 alt="auth icon"
                 style="height: 25px; margin-right: 5px"
               />
-              Add Preferences
+              University Preferences
             </a>
             <a
               href="documents.html"
@@ -183,7 +248,7 @@
           <!-- Save button -->
           <div class="row">
             <div class="col text-end">
-              <a href="program&seats.html">
+              <a href="#">
                 <button type="submit" class="btn btn-success">
                   Save & Continue
                 </button>
@@ -193,7 +258,9 @@
         </div>
       </div>
     </div>
-
+    <div class="footer">
+      © Copyright 2023 Site Developed and Maintained by IT Department, UHS.
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
