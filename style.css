@@ -1,0 +1,18 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(73, 73, 73);
+}
+
+.preference-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.delete-button {
+    cursor: pointer;
+}
+
+

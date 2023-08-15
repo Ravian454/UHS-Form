@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Admission Form</title>
+    <style>
+      .list-group-item.active {
+        background-color: #d9e9f1;
+        border-color: #d9e9f1;
+        color: #307b9a;
+      }
+    </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-inherit d-flex justify-content-center pb-3">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <!-- Logo goes here. -->
+                    <img src="images/logo.png" alt="Logo" style="height: 55px;width: 55px;"/>
+                    <span>University Of Health Sciences</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+      <div class="container ">
+        <div class="row" >
+            <!-- Side Menu Column (25% of space) -->
+            <div class="col-md-3">
+                <div class="list-group " style="border-radius: 10px; box-shadow: 0 0 20px 0 rgba(0,0,0,0.10);">
+                    <a
+                        href="#"
+                        class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none active"
+
+                    >
+                        <img
+                            src="images/resume.png"
+                            alt="Resume Icon"
+                        
+                            style="height: 25px;margin-right: 5px;"
+                        />
+                        Personal Information
+                    </a>
+                    <a
+                        href="program&seats.html"
+                        class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
+
+                    >
+                        <img
+                            src="images/bachelor.png"
+                            alt="degree Icon"
+                        
+                            style="height: 25px;margin-right: 5px;"
+                        />
+                        Program & Seats Category
+                    </a>
+                    <a
+                        href="qualification.html"
+                        class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
+
+                    >
+                        <img
+                            src="images/qualifications.png"
+                            alt="qualification icon"
+                          
+                            style="height: 25px;margin-right: 5px;"
+                        />
+                        Qualifications
+                    </a>
+                    <a
+                        href="admissiontest.html"
+                        class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
+
+                    >
+                        <img
+                            src="images/test.png"
+                            alt="test icon"
+                            
+                            style="height: 25px;margin-right: 5px;"
+                        />
+                        Admission Test
+                    </a>
+                    <a
+                    href="prefernces.html"
+                    class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
+                >
+                    <img
+                    src="images/preference.png"
+                        alt="auth icon"
+                        style="height: 25px;margin-right: 5px;"
+                    />
+                    Add Preferences
+                </a>
+                    <a
+                        href="solemonauth.html"
+                        class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
+                    >
+                        <img
+                            src="images/insurance.png"
+                            alt="auth icon"  
+                            
+                            style="height: 25px;margin-right: 5px;"
+                        />
+                        Affidavit
+                    </a>
+                </div>
+            </div>
+
+            <div
+             class="col-md-9 p-5"
+                style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 20px 0 rgba(0,0,0,0.10);"
+            >
+                <!-- Second Column (75% of space) -->
+                <div class="row">
+                  <div class="col-md-4">
+                      <label for="formFile" class="form-label">Upload Your Photo</label>
+                      <input class="form-control" type="file" id="formFile">
+                  </div>
+                  <div class="col-md-4">
+                      
+                  </div>
+                  <div class="col-md-4"></div>
+              </div>
+                <div class="row">
+                    <div class="col-md-6" style="padding-top: 48px;">
+                        
+                        <label for="applicantName">Name</label>
+                        <input
+                            type="text"
+                            class="form-control mb-3"
+                            id="applicantName"
+                            placeholder="Name of the Applicant"
+                        />
+  
+                        <label for="fgname">Father/Guardian Name</label>
+                        <input
+                            type="text"
+                            class="form-control mb-3"
+                            id="fatherName"
+                            placeholder="Father/Guardian Name"
+                        />
+                        <label for="mname">Mother's Name</label>
+                        <input
+                            type="text"
+                            class="form-control mb-3"
+                            id="motherName"
+                            placeholder="Mother's Name"
+                        />
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="cellnum">Cell #</label>
+                                <input
+                                    type="tel"
+                                    class="form-control mb-3"
+                                    id="cell"
+                                    placeholder="Cell"
+                                />
+                                <label for="telnum">Tel #</label>
+                                <input
+                                    type="tel"
+                                    class="form-control mb-3"
+                                    id="tel"
+                                    placeholder="Tel"
+                                />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="mailadd">Mailing Address</label>
+                                <input
+                                    type="text"
+                                    class="form-control mb-3"
+                                    id="mailingAddress"
+                                    placeholder="Mailing Address (Res.)"
+                                />
+                                <label for="email">Email</label>
+                                <input
+                                    type="email"
+                                    class="form-control mb-3"
+                                    id="email"
+                                    placeholder="Email"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-check">
+                          <input
+                              type="checkbox"
+                              class="form-check-input"
+                              id="hifzQuran"
+                          />
+                          <label class="form-check-label" for="hifzQuran"
+                          >Hifz-e-Quran</label
+                          >
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="gender" class="mt-5">Choose Gender</label>
+                        <select class="form-select mb-3" id="gender">
+                            <option selected>Choose Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="nationality">Choose Nationality</label>
+                        <select class="form-select mb-3" id="nationality">
+                            <option selected>Choose Nationality...</option>
+                        </select>
+                        <label for="dob">DOB</label>
+                        <input
+                            type="date"
+                            class="form-control mb-3"
+                            id="dob"
+                            placeholder="Date Of Birth"
+                        />
+                        <label for="domicile">District Of Domicile</label>
+                        <input
+                            type="text"
+                            class="form-control mb-3"
+                            id="domicile"
+                            placeholder="Domicile"
+                        />
+                        <label for="areaOfResidence">Area Of Residence</label>
+                        <select class="form-select mb-3" id="areaOfResidence">
+                            <option selected>Choose Area Of Residence</option>
+                            <option value="rural">Rural</option>
+                            <option value="urban">Urban</option>
+                        </select>
+                        <label for="idnum">CNIC/POC/PASSPORT/B-Form</label>
+                        <input
+                            type="text"
+                            class="form-control mb-3"
+                            id="cnic"
+                            placeholder="CNIC/POC/PASSPORT/B-Form"
+                        />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-end">
+                        <a href="program&seats.html">
+                            <button type="submit" class="btn btn-success border-2 border-green-500 rounded-lg shadow-md transition duration-300">
+                              Save & Continue
+                          </button></a>
+                          
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const countries = [
+      "Afghanistan",
+        "Albania",
+        "Algeria",
+        "Andorra",
+        "Angola",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Armenia",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "The Bahamas",
+        "Bahrain",
+        "Bangladesh",
+        "Barbados",
+        "Belarus",
+        "Belgium",
+        "Belize",
+        "Benin",
+        "Bhutan",
+        "Bolivia",
+        "Bosnia and Herzegovina",
+        "Botswana",
+        "Brazil",
+        "Brunei",
+        "Bulgaria",
+        "Burkina Faso",
+        "Burundi",
+        "Cabo Verde",
+        "Cambodia",
+        "Cameroon",
+        "Canada",
+        "Central African Republic",
+        "Chad",
+        "Chile",
+        "China",
+        "Colombia",
+        "Comoros",
+        "Congo, Democratic Republic of the",
+        "Congo, Republic of the",
+        "Costa Rica",
+        "Côte d’Ivoire",
+        "Croatia",
+        "Cuba",
+        "Cyprus",
+        "Czech Republic",
+        "Denmark",
+        "Djibouti",
+        "Dominica",
+        "Dominican Republic",
+        "East Timor (Timor-Leste)",
+        "Ecuador",
+        "Egypt",
+        "El Salvador",
+        "Equatorial Guinea",
+        "Eritrea",
+        "Estonia",
+        "Eswatini",
+        "Ethiopia",
+        "Fiji",
+        "Finland",
+        "France",
+        "Gabon",
+        "The Gambia",
+        "Georgia",
+        "Germany",
+        "Ghana",
+        "Greece",
+        "Grenada",
+        "Guatemala",
+        "Guinea",
+        "Guinea-Bissau",
+        "Guyana",
+        "Haiti",
+        "Honduras",
+        "Hungary",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Iran",
+        "Iraq",
+        "Ireland",
+        "Israel",
+        "Italy",
+        "Jamaica",
+        "Japan",
+        "Jordan",
+        "Kazakhstan",
+        "Kenya",
+        "Kiribati",
+        "Korea, North",
+        "Korea, South",
+        "Kosovo",
+        "Kuwait",
+        "Kyrgyzstan",
+        "Laos",
+        "Latvia",
+        "Lebanon",
+        "Lesotho",
+        "Liberia",
+        "Libya",
+        "Liechtenstein",
+        "Lithuania",
+        "Luxembourg",
+        "Madagascar",
+        "Malawi",
+        "Malaysia",
+        "Maldives",
+        "Mali",
+        "Malta",
+        "Marshall Islands",
+        "Mauritania",
+        "Mauritius",
+        "Mexico",
+        "Micronesia, Federated States of",
+        "Moldova",
+        "Monaco",
+        "Mongolia",
+        "Montenegro",
+        "Morocco",
+        "Mozambique",
+        "Myanmar (Burma)",
+        "Namibia",
+        "Nauru",
+        "Nepal",
+        "Netherlands",
+        "New Zealand",
+        "Nicaragua",
+        "Niger",
+        "Nigeria",
+        "North Macedonia",
+        "Norway",
+        "Oman",
+        "Pakistan",
+        "Palau",
+        "Panama",
+        "Papua New Guinea",
+        "Paraguay",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Qatar",
+        "Romania",
+        "Russia",
+        "Rwanda",
+        "Saint Kitts and Nevis",
+        "Saint Lucia",
+        "Saint Vincent and the Grenadines",
+        "Samoa",
+        "San Marino",
+        "Sao Tome and Principe",
+        "Saudi Arabia",
+        "Senegal",
+        "Serbia",
+        "Seychelles",
+        "Sierra Leone",
+        "Singapore",
+        "Slovakia",
+        "Slovenia",
+        "Solomon Islands",
+        "Somalia",
+        "South Africa",
+        "Spain",
+        "Sri Lanka",
+        "Sudan",
+        "Sudan, South",
+        "Suriname",
+        "Sweden",
+        "Switzerland",
+        "Syria",
+        "Taiwan",
+        "Tajikistan",
+        "Tanzania",
+        "Thailand",
+        "Togo",
+        "Tonga",
+        "Trinidad and Tobago",
+        "Tunisia",
+        "Turkey",
+        "Turkmenistan",
+        "Tuvalu",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Kingdom",
+        "United States",
+        "Uruguay",
+        "Uzbekistan",
+        "Vanuatu",
+        "Vatican City",
+        "Venezuela",
+        "Vietnam",
+        "Yemen",
+        "Zambia",
+        "Zimbabwe",
+      ];
+
+      const nationalityDropdown = document.getElementById("nationality");
+
+      countries.forEach((country) => {
+          const option = document.createElement("option");
+          option.value = country;
+          option.text = country;
+          nationalityDropdown.appendChild(option);
+      });
+  </script>
+</body>
+</html>
