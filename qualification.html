@@ -1,263 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Admission Form</title>
     <style>
-        .list-group-item.active {
-            background-color: #d9e9f1;
-            border-color: #d9e9f1;
-            color: #307b9a;
-        }
+      .list-group-item.active {
+        background-color: #d9e9f1;
+        border-color: #d9e9f1;
+        color: #307b9a;
+      }
     </style>
-</head>
-<body>
-  <div class="container">
-    <div class="row">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
         <div class="col-12">
-            <nav class="navbar navbar-expand-lg navbar-light bg-inherit d-flex justify-content-center pb-3">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <!-- Logo goes here. -->
-                    <img src="images/logo.png" alt="Logo" style="height: 55px;width: 55px;"/>
-                    <span>University Of Health Sciences</span>
-                </a>
-            </nav>
+          <nav
+            class="navbar navbar-expand-lg navbar-light bg-inherit d-flex justify-content-center pb-3"
+          >
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <!-- Logo goes here. -->
+              <img
+                src="images/logo.png"
+                alt="Logo"
+                style="height: 55px; width: 55px"
+              />
+              <span>University Of Health Sciences</span>
+            </a>
+          </nav>
         </div>
+      </div>
     </div>
-</div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <!-- First Column (25% of space) -->
-                <div class="list-group" style="border-radius: 10px; box-shadow: 0 0 20px 0 rgba(0,0,0,0.10);">
-                    <a
-                        href="profile.html"
-                        class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
-                    >
-                        <img
-                            src="images/resume.png"
-                            alt="Resume Icon"
-                            style="height: 25px;margin-right: 5px;"
-                        />
-                        Personal Information
-                    </a>
-                    <a
-                        href="program&seats.html"
-                        class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
-                    >
-                        <img
-                            src="images/bachelor.png"
-                            alt="degree Icon"
-                            style="height: 25px;margin-right: 5px;"
-                        />
-                        Program & Seats Category
-                    </a>
-                    <a
-                        href="#"
-                        class="list-group-item list-group-item-action d-flex align-items-center active p-3 border-none"
-                    >
-                        <img
-                            src="images/qualifications.png"
-                            alt="qualification icon"
-                            style="height: 25px;margin-right: 5px;"
-                        />
-                        Qualifications
-                    </a>
-                    <a
-                        href="admissiontest.html"
-                        class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
-                    >
-                        <img
-                            src="images/test.png"
-                            alt="test icon"
-                            style="height: 25px;margin-right: 5px;"
-                        />
-                        Admission Test
-                    </a>
-                    <a
-                    href="prefernces.html"
-                    class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
-                >
-                    <img
-                    src="images/preference.png"
-                        alt="auth icon"
-                        style="height: 25px;margin-right: 5px;"
-                    />
-                    Add Preferences
-                </a>
-                    <a
-                        href="solemonauth.html"
-                        class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
-                    >
-                        <img
-                            src="images/insurance.png"
-                            alt="auth icon"
-                            style="height: 25px;margin-right: 5px;"
-                        />
-                        Affidavit
-                    </a>
-                </div>
-            </div>
-            <div
-                class="col-md-9 p-5"
-                style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 20px 0 rgba(0,0,0,0.10);"
+      <div class="row">
+        <div class="col-md-3">
+          <!-- First Column (25% of space) -->
+          <div
+            class="list-group"
+            style="
+              border-radius: 10px;
+              box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+            "
+          >
+            <a
+              href="profile.html"
+              class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
             >
-                <!-- Second Column (75% of space) -->
-
-                <h6 class="text-danger fw-bold">
-                    *Aggregate marks in HSSC / equivalent must not be less than 60% i.e.
-                    660/1100
-                </h6>
-
-                <!-- Qualifications section with input fields -->
-                <div class="mb-3">
-                    <div class="row mb-2">
-                        <h4 class="mt-4 mb-3">SSC / 10-Grade / O-Level</h4>
-                        <div class="col-md-6">
-                            <label for="examinationPassed">Examination Passed</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="examinationPassed"
-                            />
-                        </div>
-                        <div class="col-md-6">
-                            <label for="scienceSubjects">Science Subjects</label>
-                            <input type="text" class="form-control" id="scienceSubjects" />
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col-md-6">
-                            <label for="institutionType">Institution Type</label>
-                            <input type="text" class="form-control" id="institutionType" />
-                        </div>
-                        <div class="col-md-6">
-                            <label for="boardUniversity">Board / University</label>
-                            <input type="text" class="form-control" id="boardUniversity" />
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col-md-6">
-                            <label for="yearOfPassing" class="mt-0">Choose Year Of Passing</label>
-                            <select class="form-select mb-3" id="yearOfPassing">
-                                <option selected>Year</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="marksObtained">Marks Obtained</label>
-                            <input type="text" class="form-control" id="marksObtained" />
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col-md-6">
-                            <label for="totalMarks">Total Marks</label>
-                            <input type="text" class="form-control" id="totalMarks" />
-                        </div>
-                        <div class="col-md-6">
-                            <!-- Empty column for layout balance -->
-                        </div>
-                    </div>
-                </div>
-
-                <button id="addQualificationBtn" class="btn btn-primary">
-                    Qualifications for Intermediate
-                </button>
-
-                <h6 class="mt-4 mb-4 text-danger fw-bold">
-                    * Intermediate / Equivalent (Subject) scores
-                </h6>
-                <div class="mb-3">
-                    <label for="chemistry">Chemistry</label>
-                    <div class="input-group">
-                        <input
-                            type="number"
-                            class="form-control"
-                            id="chemistry"
-                            placeholder="Score"
-                        />
-                        <span class="input-group-text">/</span>
-                        <input
-                            type="number"
-                            class="form-control"
-                            id="chemistryTotal"
-                            placeholder="Total"
-                        />
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="biology">Biology</label>
-                    <div class="input-group">
-                        <input
-                            type="number"
-                            class="form-control"
-                            id="biology"
-                            placeholder="Score"
-                        />
-                        <span class="input-group-text">/</span>
-                        <input
-                            type="number"
-                            class="form-control"
-                            id="biologyTotal"
-                            placeholder="Total"
-                        />
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="physicsMath">Physics/Math</label>
-                    <div class="input-group">
-                        <input
-                            type="number"
-                            class="form-control"
-                            id="physicsMath"
-                            placeholder="Score"
-                        />
-                        <span class="input-group-text">/</span>
-                        <input
-                            type="number"
-                            class="form-control"
-                            id="physicsMathTotal"
-                            placeholder="Total"
-                        />
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col text-end">
-                        <a href="admissiontest.html">
-                            <button type="submit" class="btn btn-success">Save & Continue</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
+              <img
+                src="images/resume.png"
+                alt="Resume Icon"
+                style="height: 25px; margin-right: 5px"
+              />
+              Personal Information
+            </a>
+            <a
+              href="program&seats.html"
+              class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
+            >
+              <img
+                src="images/bachelor.png"
+                alt="degree Icon"
+                style="height: 25px; margin-right: 5px"
+              />
+              Program & Seats Category
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex align-items-center active p-3 border-none"
+            >
+              <img
+                src="images/qualifications.png"
+                alt="qualification icon"
+                style="height: 25px; margin-right: 5px"
+              />
+              Qualifications
+            </a>
+            <a
+              href="admissiontest.html"
+              class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
+            >
+              <img
+                src="images/test.png"
+                alt="test icon"
+                style="height: 25px; margin-right: 5px"
+              />
+              Admission Test
+            </a>
+            <a
+              href="prefernces.html"
+              class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
+            >
+              <img
+                src="images/preference.png"
+                alt="auth icon"
+                style="height: 25px; margin-right: 5px"
+              />
+              Add Preferences
+            </a>
+            <a
+              href="documents.html"
+              class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
+            >
+              <img
+                src="images/preference.png"
+                alt="auth icon"
+                style="height: 25px; margin-right: 5px"
+              />
+              Upload Documents
+            </a>
+            <a
+              href="solemonauth.html"
+              class="list-group-item list-group-item-action d-flex align-items-center p-3 border-none"
+            >
+              <img
+                src="images/insurance.png"
+                alt="auth icon"
+                style="height: 25px; margin-right: 5px"
+              />
+              Affidavit
+            </a>
+          </div>
         </div>
+        <div
+          class="col-md-9 p-5"
+          style="
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+          "
+        >
+          <!-- Second Column (75% of space) -->
+
+          <h6 class="text-danger fw-bold">
+            *Aggregate marks in HSSC / equivalent must not be less than 60% i.e.
+            660/1100
+          </h6>
+
+          <!-- Qualifications section with input fields -->
+          <div class="mb-3">
+            <div class="row mb-2">
+              <h4 class="mt-4 mb-3">SSC / 10-Grade / O-Level</h4>
+              <div class="col-md-6">
+                <label for="examinationPassed">Examination Passed</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="examinationPassed"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="scienceSubjects">Science Subjects</label>
+                <input type="text" class="form-control" id="scienceSubjects" />
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-6">
+                <label for="institutionType">Institution Type</label>
+                <input type="text" class="form-control" id="institutionType" />
+              </div>
+              <div class="col-md-6">
+                <label for="boardUniversity">Board / University</label>
+                <input type="text" class="form-control" id="boardUniversity" />
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-6">
+                <label for="yearOfPassing" class="mt-0"
+                  >Choose Year Of Passing</label
+                >
+                <select class="form-select mb-3" id="yearOfPassing">
+                  <option selected>Year</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="marksObtained">Marks Obtained</label>
+                <input type="text" class="form-control" id="marksObtained" />
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-6">
+                <label for="totalMarks">Total Marks</label>
+                <input type="text" class="form-control" id="totalMarks" />
+              </div>
+              <div class="col-md-6">
+                <!-- Empty column for layout balance -->
+              </div>
+            </div>
+          </div>
+
+          <button id="addQualificationBtn" class="btn btn-primary">
+            Qualifications for Intermediate
+          </button>
+
+          <h6 class="mt-4 mb-4 text-danger fw-bold">
+            * Intermediate / Equivalent (Subject) scores
+          </h6>
+          <div class="mb-3">
+            <label for="chemistry">Chemistry</label>
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control"
+                id="chemistry"
+                placeholder="Score"
+              />
+              <span class="input-group-text">/</span>
+              <input
+                type="number"
+                class="form-control"
+                id="chemistryTotal"
+                placeholder="Total"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="biology">Biology</label>
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control"
+                id="biology"
+                placeholder="Score"
+              />
+              <span class="input-group-text">/</span>
+              <input
+                type="number"
+                class="form-control"
+                id="biologyTotal"
+                placeholder="Total"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="physicsMath">Physics/Math</label>
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control"
+                id="physicsMath"
+                placeholder="Score"
+              />
+              <span class="input-group-text">/</span>
+              <input
+                type="number"
+                class="form-control"
+                id="physicsMathTotal"
+                placeholder="Total"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col text-end">
+              <a href="admissiontest.html">
+                <button type="submit" class="btn btn-success">
+                  Save & Continue
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const addQualificationBtn = document.getElementById(
-                "addQualificationBtn"
-            );
-            let isFieldsAdded = false;
+      document.addEventListener("DOMContentLoaded", function () {
+        const addQualificationBtn = document.getElementById(
+          "addQualificationBtn"
+        );
+        let isFieldsAdded = false;
 
-            addQualificationBtn.addEventListener("click", function () {
-                if (isFieldsAdded) {
-                    removeQualificationFields();
-                } else {
-                    addQualificationFields();
-                }
-                isFieldsAdded = !isFieldsAdded;
-            });
+        addQualificationBtn.addEventListener("click", function () {
+          if (isFieldsAdded) {
+            removeQualificationFields();
+          } else {
+            addQualificationFields();
+          }
+          isFieldsAdded = !isFieldsAdded;
+        });
 
-            function addQualificationFields() {
-                const qualificationsContainer = document.querySelector(".mb-3");
-                const newQualificationFields = `
+        function addQualificationFields() {
+          const qualificationsContainer = document.querySelector(".mb-3");
+          const newQualificationFields = `
                     <div class="row mb-2">
                         <h4 class="mt-4 mb-3">HSSC / 12-Grade / A-Level </h4>
                         <div class="col-md-6">
@@ -299,18 +333,18 @@
                         </div>
                     </div>
                 `;
-                const newFieldsContainer = document.createElement("div");
-                newFieldsContainer.innerHTML = newQualificationFields;
-                qualificationsContainer.appendChild(newFieldsContainer);
-            }
+          const newFieldsContainer = document.createElement("div");
+          newFieldsContainer.innerHTML = newQualificationFields;
+          qualificationsContainer.appendChild(newFieldsContainer);
+        }
 
-            function removeQualificationFields() {
-                const qualificationsContainer = document.querySelector(".mb-3");
-                qualificationsContainer.removeChild(
-                    qualificationsContainer.lastChild
-                );
-            }
-        });
+        function removeQualificationFields() {
+          const qualificationsContainer = document.querySelector(".mb-3");
+          qualificationsContainer.removeChild(
+            qualificationsContainer.lastChild
+          );
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
