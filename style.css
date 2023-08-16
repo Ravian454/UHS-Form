@@ -15,5 +15,7 @@ body{
     cursor: pointer;
 }
 
-
+.form-check-input[type="radio"]{
+    border-color:  #2a2e31;
+}
 
